@@ -1,6 +1,6 @@
 # Benchmarking
 
-If you want to compare two or blocks of code in ruby, there's a handy gem for it called benchkmark-ips (https://github.com/evanphx/benchmark-ips).
+If you want to compare two or blocks of code in ruby, there's a handy gem for it called [benchmark-ips](https://github.com/evanphx/benchmark-ips).
 
 Here's a simple example comparing the performance of `tap` against using local variables.
 
