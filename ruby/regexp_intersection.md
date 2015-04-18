@@ -25,7 +25,7 @@ through POSIX bracket classes or [character properties][1]:
 /[[[:alnum:]]&&[^4-9]]/
 
 # match any punctuation *except* a forward slash
-/[\p{Punct}&&[^/]]/
+%r{[\p{Punct}&&[^/]]}
 ```
 
 [0]: http://ruby-doc.org/core-2.1.1/Regexp.html#class-Regexp-label-Character+Classes
