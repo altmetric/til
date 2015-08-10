@@ -27,3 +27,16 @@ You should avoid using `OpenURI` where there is any possibility of user content
 making its way into the call to `#open`.
 
 See [Egor Homakov's blog post](http://sakurity.com/blog/2015/02/28/openuri.html) for more information. 
+
+## Safer alternatives
+
+Instead of using `OpenURI`, use the `net` classes directly:
+
+```ruby
+require 'net/http'
+
+unsafe_uri = '|ls'
+data = Net::HTTP.get(URI(unsafe_uri))
+# => URI::InvalidURIError: bad URI(is not URI?): |ls
+# No secret data leakage!
+```
