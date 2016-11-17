@@ -49,7 +49,10 @@ With redis in particular, it is possible to be even more efficient, since the `L
 
 While grouping by a small number doesn't bring us many benefits, there are noticeable speed improvements when pushing hundreds, or even thousands, of IDs in a single line.
 
+**NB:** The use of Redis here is to illustrate the use of `xargs`. For bulk updates, Redis recommends the use of its serialization protocol and **pipe mode**. See [the Redis manual entry on mass insertion](http://redis.io/topics/mass-insert) for more details.
+
 ### Further reading
 
 * [xargs man page](http://man7.org/linux/man-pages/man1/xargs.1.html) (or `man xargs` on command line)
 * [Redis LPUSH command](http://redis.io/commands/lpush)
+* [Redis mass insertion](http://redis.io/topics/mass-insert) (includes sample Ruby code to generate [Redis protocol](http://redis.io/topics/protocol) formatted data)
